@@ -1,4 +1,23 @@
-{% for p in posts %}
-{{p.title}}
-Written by {{p.author.name}} on {{p.date}} {{p.body}} {% endfor %}
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Posts</title>
+</head>
+<body>
+<form class="logout-link" action="/accounts/logout/" method="POST">
+<button type="submit" name="button">Logout</button>
+</form>
+
+<h1> Posts List </h1>
+<div class="posts">
+{% for post in posts %}
+<h2><a href="#">{{ post.title }}</a></h2>
+<p>{{ post.snippet }}</p>
+<p>{{ post.date }}</p>
+{% endfor %}
+</div>
+</body>
+
+</html>
 

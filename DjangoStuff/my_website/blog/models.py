@@ -14,4 +14,5 @@ class Post(models.Model):
     body = models.TextField()
     def __str__(self):
         return "%s (%s)" % (self.title,self.author.name)
-
+    def snippet(self):
+        return self.body[:50] + '...'

@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'blog.apps.BlogConfig',
+    'accounts.apps.AccountsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -55,7 +56,7 @@ ROOT_URLCONF = 'my_website.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR,'templates'),'/home/sandy/DjangoStuff/my_website/blog/templates/blog',],
+        'DIRS': [os.path.join(BASE_DIR,'templates'),'/home/sandy/DjangoLearning/DjangoStuff/my_website/blog/templates/blog','/home/sandy/DjangoLearning/DjangoStuff/my_website/accounts/templates/accounts',],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

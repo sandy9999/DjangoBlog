@@ -18,12 +18,9 @@ from django.conf.urls import url, include
 from django.contrib.auth import views as auth_views
 from django.contrib import admin
 from django.urls import include, path
-from blog.views import register
 
 urlpatterns = [
-    url(r'^login/$', auth_views.login),
-    url(r'^logout/$',auth_views.logout),
-    url(r'^register/$',register),
     path('admin/', admin.site.urls),
-    path('blog/', include('blog.urls')),
+    path('', include('blog.urls')),
+    path('accounts/',include('accounts.urls')),
 ]
