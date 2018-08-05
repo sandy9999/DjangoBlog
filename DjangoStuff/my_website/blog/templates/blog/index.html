@@ -13,6 +13,7 @@
 <div class="posts">
 {% for post in posts %}
 <h2><a href="#">{{ post.title }}</a></h2>
+<h3> Written by {{ author }} </h3>
 <p>{{ post.snippet }}</p>
 <p>{{ post.date }}</p>
 {% endfor %}

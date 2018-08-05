@@ -4,7 +4,7 @@ from django.contrib.auth import authenticate, login
 from django.http import HttpResponseRedirect
 from django import forms
 from .forms import UserRegistrationForm
-from blog.models import Post, Author
+from blog.models import Post
 
 # Create your views here.
 def index(request):
